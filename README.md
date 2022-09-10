@@ -2,8 +2,7 @@
 
 기술 스택
 
-> React
-
+- React
 - Typescript
 - Vite
 - Styled Component
