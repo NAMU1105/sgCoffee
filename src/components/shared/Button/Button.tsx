@@ -1,13 +1,19 @@
-const loadingText = 'loading...'
+const loadingText = "loading...";
 
 type Props = JSX.IntrinsicElements["button"] & {
-  isLoading?: boolean
+  isLoading?: boolean;
+  apperance?: "primary" | "secondary" | "plain";
 };
 
-const Button: React.FC<Props> = ({ children,isLoading,disabled,...restProps}) => {
+const Button: React.FC<Props> = ({
+  children,
+  isLoading,
+  disabled,
+  ...restProps
+}) => {
   return (
     <button {...restProps} disabled={disabled || isLoading}>
-      {isLoading ? loadingText: children}
+      {isLoading ? loadingText : children}
     </button>
   );
 };
