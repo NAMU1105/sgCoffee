@@ -1,6 +1,8 @@
-type Props = JSX.IntrinsicElements["button"] & {};
+type Props = JSX.IntrinsicElements["button"] & {
+  isLoading?: boolean
+};
 
-const CommonButton: React.FC<Props> = ({children,...restProps}) => {
+const CommonButton: React.FC<Props> = ({ children,isLoading,...restProps}) => {
   return (
     <button {...restProps}>
       {children}
