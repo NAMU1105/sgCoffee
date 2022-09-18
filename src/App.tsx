@@ -1,11 +1,18 @@
 import { useState } from "react";
+import { Routes, Route, Link } from "react-router-dom";
+
 import "./App.css";
 import { Div } from "./assets/styles/style";
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  return <Div className="App">메렁fdfd!dd</Div>;
+  return (
+    <Div className="App">
+      <Routes>
+        <Route path="/" element={<div>main</div>} />
+        <Route path="about" element={<div>about</div>} />{" "}
+      </Routes>
+    </Div>
+  );
 }
 
 export default App;
